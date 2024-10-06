@@ -103,10 +103,15 @@ main {
   width: 100%;
 }
 
-.card-recipe {
-  background-color: var(--white);
+.card-recipe,
+.container,
+.recipe {
   display: flex;
   flex-direction: column;
+}
+
+.card-recipe {
+  background-color: var(--white);
   gap: var(--space-500);
 }
 
@@ -117,11 +122,17 @@ main {
 }
 
 .container {
+  gap: var(--space-400);
   padding: 0 var(--space-400) var(--space-500);
 }
 
 .recipe {
-  display: flex;
-  flex-direction: column;
   gap: var(--space-250);
+}
+
+.recipe__title {
+  color: var(--stone-900);
+  font-family: var(--font-title);
+  font-size: var(--font-size-450);
+  line-height: var(--line-height-105);
 }
