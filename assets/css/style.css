@@ -107,7 +107,8 @@ main {
 .card-recipe,
 .container,
 .recipe,
-.preparation {
+.preparation,
+.ingredients {
   display: flex;
   flex-direction: column;
 }
@@ -153,7 +154,8 @@ main {
   line-height: var(--line-height-120);
 }
 
-.preparation__list {
+.preparation__list,
+.ingredients__list {
   display: flex;
   flex-direction: column;
   gap: var(--space-100);
@@ -175,4 +177,33 @@ main {
 
 .preparation__item strong {
   font-weight: 700;
+}
+
+.ingredients {
+  gap: var(--space-300);
+}
+
+.ingredients__title {
+  color: var(--brown-800);
+  font-family: "Young Serif";
+  font-size: var(--font-size-350);
+}
+
+.ingredients__item::before {
+  content: "";
+  border: 2px var(--rose-800) solid;
+  border-radius: 50%;
+  margin-top: 0.625rem;
+  margin-left: -2rem;
+  position: absolute;
+}
+
+.ingredients__item:last-child::before {
+  margin-top: 1.5rem;
+}
+
+.section-divider {
+  background-color: var(--stone-150);
+  display: block;
+  height: 1px;
 }
