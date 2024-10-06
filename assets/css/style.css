@@ -1,11 +1,13 @@
 @import "reset.css";
+
 /* outfit-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/outfit-v11-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/outfit/static/outfit-v11-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* outfit-600 - latin */
 @font-face {
@@ -13,7 +15,7 @@
   font-family: "Outfit";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/outfit-v11-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/outfit/static/outfit-v11-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* outfit-700 - latin */
 @font-face {
@@ -21,7 +23,7 @@
   font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/outfit-v11-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/outfit/static/outfit-v11-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* young-serif-regular - latin */
@@ -30,7 +32,8 @@
   font-family: "Young Serif";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/young-serif-v2-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/young-serif/static/young-serif-v2-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 :root {
@@ -85,11 +88,11 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--font-text), sans-serif;
+  font-size: var(--font-size-200);
   letter-spacing: var(--letter-spacing-0px);
   line-height: var(--line-height-150);
   min-height: 100dvh;
   justify-content: center;
-  text-align: center;
 }
 
 main {
@@ -111,4 +114,14 @@ main {
   display: block;
   object-fit: cover;
   max-width: 100%;
+}
+
+.container {
+  padding: 0 var(--space-400) var(--space-500);
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-250);
 }
