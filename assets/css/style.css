@@ -70,6 +70,7 @@
   /* SPACING */
   --space-500: 2.5rem;
   --space-400: 2rem;
+  --space-350: 1.75rem;
   --space-300: 1.5rem;
   --space-250: 1.25rem;
   --space-200: 1rem;
@@ -105,7 +106,8 @@ main {
 
 .card-recipe,
 .container,
-.recipe {
+.recipe,
+.preparation {
   display: flex;
   flex-direction: column;
 }
@@ -135,4 +137,42 @@ main {
   font-family: var(--font-title);
   font-size: var(--font-size-450);
   line-height: var(--line-height-105);
+}
+
+.preparation {
+  background-color: var(--rose-50);
+  border-radius: var(--border-radius-100);
+  gap: var(--space-200);
+  padding: var(--space-250) var(--space-300) var(--space-350);
+}
+
+.preparation__title {
+  color: var(--rose-800);
+  font-size: var(--font-size-250);
+  font-weight: 600;
+  line-height: var(--line-height-120);
+}
+
+.preparation__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-100);
+  padding-left: var(--space-500);
+}
+
+.preparation__item::before {
+  content: "";
+  border: 2px var(--rose-800) solid;
+  border-radius: 50%;
+  margin-top: 0.625rem;
+  margin-left: -2rem;
+  position: absolute;
+}
+
+.preparation__item:first-child::before {
+  margin-top: 1.5rem;
+}
+
+.preparation__item strong {
+  font-weight: 700;
 }
