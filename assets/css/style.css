@@ -109,7 +109,8 @@ main {
 .recipe,
 .preparation,
 .ingredients,
-.instructions {
+.instructions,
+.nutrition {
   display: flex;
   flex-direction: column;
 }
@@ -186,7 +187,8 @@ main {
 }
 
 .ingredients,
-.instructions {
+.instructions,
+.nutrition {
   gap: var(--space-300);
 }
 
@@ -214,4 +216,37 @@ main {
 .instructions__item::marker {
   color: var(--rose-800);
   font-weight: 700;
+}
+
+.nutrition__value,
+.nutrition__name {
+  padding: 0.75rem;
+}
+
+.nutrition__value {
+  color: var(--rose-800);
+  font-weight: 700;
+}
+
+.nutrition__name:first-child {
+  padding-left: 2rem;
+}
+
+.nutrition__name {
+  width: 50%;
+}
+
+.nutrition__row:not(:last-child) {
+  border-bottom: 1px solid var(--stone-150);
+}
+
+.nutrition__row:first-child .nutrition__name,
+.nutrition__row:first-child .nutrition__value {
+  padding-top: 0;
+}
+
+.nutrition__row:last-child .nutrition__name,
+.nutrition__row:last-child .nutrition__value {
+  border-bottom: none;
+  padding-bottom: 0;
 }
