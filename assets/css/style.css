@@ -108,7 +108,8 @@ main {
 .container,
 .recipe,
 .preparation,
-.ingredients {
+.ingredients,
+.instructions {
   display: flex;
   flex-direction: column;
 }
@@ -156,7 +157,8 @@ main {
 }
 
 .preparation__list,
-.ingredients__list {
+.ingredients__list,
+.instructions__list {
   display: flex;
   flex-direction: column;
   gap: var(--space-100);
@@ -173,20 +175,24 @@ main {
   color: var(--rose-800);
   content: "•";
   position: absolute;
-  left: 0.5rem;
+  left: var(--space-100);
   top: 50%;
   transform: translateY(-50%);
 }
 
-.preparation__item strong {
+.preparation__item strong,
+.instructions__item strong {
   font-weight: 700;
 }
 
-.ingredients {
+.ingredients,
+.instructions {
   gap: var(--space-300);
 }
 
-.ingredients__title {
+.ingredients__title,
+.instructions__title,
+.nutrition__title {
   color: var(--brown-800);
   font-family: "Young Serif";
   font-size: var(--font-size-350);
@@ -197,4 +203,15 @@ main {
   background-color: var(--stone-150);
   display: block;
   height: 1px;
+}
+
+.instructions__item {
+  list-style-type: decimal;
+  padding-left: 1rem;
+  margin-left: var(--space-300);
+}
+
+.instructions__item::marker {
+  color: var(--rose-800);
+  font-weight: 700;
 }
