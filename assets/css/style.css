@@ -116,6 +116,7 @@ main {
 .card-recipe {
   background-color: var(--white);
   gap: var(--space-500);
+  max-width: 46rem;
 }
 
 .recipe__image {
@@ -159,20 +160,22 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--space-100);
-  padding-left: var(--space-500);
 }
 
-.preparation__item::before {
-  content: "";
-  border: 2px var(--rose-800) solid;
-  border-radius: 50%;
-  margin-top: 0.625rem;
-  margin-left: -2rem;
+.preparation__item,
+.ingredients__item {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.preparation__item::before,
+.ingredients__item::before {
+  color: var(--rose-800);
+  content: "•";
   position: absolute;
-}
-
-.preparation__item:first-child::before {
-  margin-top: 1.5rem;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .preparation__item strong {
@@ -187,19 +190,7 @@ main {
   color: var(--brown-800);
   font-family: "Young Serif";
   font-size: var(--font-size-350);
-}
-
-.ingredients__item::before {
-  content: "";
-  border: 2px var(--rose-800) solid;
-  border-radius: 50%;
-  margin-top: 0.625rem;
-  margin-left: -2rem;
-  position: absolute;
-}
-
-.ingredients__item:last-child::before {
-  margin-top: 1.5rem;
+  line-height: var(--line-height-105);
 }
 
 .section-divider {
