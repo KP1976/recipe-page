@@ -101,6 +101,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: var(--space-200);
   width: 100%;
 }
 
@@ -254,4 +255,30 @@ main {
 
 .attribution {
   padding: 1rem;
+}
+
+@media screen and (min-width: 28.125rem) {
+  .card-recipe {
+    border-radius: var(--border-radius-300);
+    padding: var(--space-250);
+  }
+
+  .recipe__image {
+    border-radius: var(--border-radius-150);
+  }
+
+  .container {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 46rem) {
+  .card-recipe {
+    border-radius: var(--border-radius-300);
+    padding: var(--space-500);
+  }
+
+  /* .container {
+    padding: 0 var(--space-400) var(--space-500);
+  } */
 }
