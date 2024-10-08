@@ -139,7 +139,11 @@ main {
 .recipe__title {
   color: var(--stone-900);
   font-family: var(--font-title);
-  font-size: var(--font-size-450);
+  font-size: clamp(
+    var(--font-size-450),
+    5.434782608695652vw,
+    var(--font-size-500)
+  ); /* 40px (max) / 736px * 100 = 5.434782608695652vw */
   line-height: var(--line-height-105);
 }
 
