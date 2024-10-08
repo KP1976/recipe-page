@@ -277,8 +277,4 @@ main {
     border-radius: var(--border-radius-300);
     padding: var(--space-500);
   }
-
-  /* .container {
-    padding: 0 var(--space-400) var(--space-500);
-  } */
 }
