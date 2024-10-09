@@ -22,18 +22,21 @@
       <article class="card-recipe">
         <img
           class="recipe__image"
-          src="assets/images/image-omelette.jpeg"
+          src="assets/images/image-omelette-375px.webp"
+          srcset="assets/images/image-omelette-656px.webp 450w"
+          sizes="(max-width: 450px) 393px,
+                (max-width: 736px) 656px"
           alt="Picture of omelette"
         />
         <div class="container">
-          <div class="recipe">
+          <header class="recipe">
             <h1 class="recipe__title">Simple Omelette Recipe</h1>
             <p class="recipe__description">
               An easy and quick dish, perfect for any meal. This classic
               omelette combines beaten eggs cooked to perfection, optionally
               filled with your choice of cheese, vegetables, or meats.
             </p>
-          </div>
+          </header>
           <section class="preparation">
             <h2 class="preparation__title">Preparation time</h2>
             <ul class="preparation__list">
