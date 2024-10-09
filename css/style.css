@@ -103,7 +103,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* padding: var(--space-200); */
   width: 100%;
 }
 
@@ -180,12 +179,19 @@ main {
 
 .preparation__item::before,
 .ingredients__item::before {
-  color: var(--rose-800);
   content: "•";
   position: absolute;
   left: var(--space-100);
   top: 50%;
   transform: translateY(-50%);
+}
+
+.preparation__item::before {
+  color: var(--rose-800);
+}
+
+.ingredients__item::before {
+  color: var(--brown-800);
 }
 
 .preparation__item strong,
@@ -223,7 +229,7 @@ main {
 .instructions__item::marker,
 .nutrition__value,
 .attribution__link {
-  color: var(--rose-800);
+  color: var(--brown-800);
   font-weight: 700;
 }
 
